@@ -236,6 +236,43 @@ form label {
 }
 
 /* Modo oscuro */
+
+.theme-toggle-container {
+    position: absolute;
+    right: 130px;
+    display: inline;
+}
+
+.theme-toggle {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.95em;
+}
+
+.theme-toggle:hover {
+    background: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-icon {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+    transform: rotate(20deg);
+}
+
 body.dark-theme .terminal-email {
     background: #0d0d0d;
     border-color: #34d639;
@@ -291,4 +328,17 @@ body.dark-theme footer {
 /* Borde blanco en modo oscuro */
 body.dark-theme .foto-perfil {
     border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-toggle-container {
+        position: static;
+        display: block;
+        margin-top: 15px;
+    }
+    
+    .theme-toggle {
+        margin-left: auto;
+    }
 }
