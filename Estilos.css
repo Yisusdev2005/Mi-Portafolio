@@ -1,344 +1,344 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 5px 0 0;
-}
-
-#about p {
-    text-align: justify;
-    text-justify: inter-word;
-    margin: 0 auto;
-    max-width: 700px; 
-    line-height: 1.6; 
-    padding: 10px 0;
-    hyphens: auto;
-    font-size: 1.1em;
-}
-
-/* Estilo para la foto de perfil */
-.foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #ffffff; 
-    margin: 20px auto;
-    display: block;
-    object-fit: cover; 
-}
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-#projects {
-    background: #f8f9fa;
-    padding: 40px 20px;
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.project-card {
-    background: #fff;
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-}
-
-.project-card h3 {
-    color: #24292e;
-    margin: 0 0 10px;
-}
-
-.project-description {
-    color: #586069;
-    font-size: 0.95em;
-    margin: 0 0 15px;
-}
-
-.project-tech {
-    margin-bottom: 15px;
-}
-
-.tech-tag {
-    display: inline-block;
-    background: #f1f8ff;
-    color: #0366d6;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    margin-right: 8px;
-    border: 1px solid #d1d5da;
-}
-
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    color: #0366d6;
-    text-decoration: none;
-    font-weight: 500;
-    gap: 5px;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-
-/* Línea divisoria entre proyectos */
-.projects-container::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 20px;
-    bottom: 20px;
-    width: 1px;
-    background: #e1e4e8;
-    transform: translateX(-50%);
-}
-
-/* Modo Oscuro */
-body.dark-theme #projects {
-    background: #0d1117;
-}
-
-body.dark-theme .project-card {
-    background: #161b22;
-    border-color: #30363d;
-}
-
-body.dark-theme .project-card h3 {
-    color: #c9d1d9;
-}
-
-body.dark-theme .project-description {
-    color: #8b949e;
-}
-
-body.dark-theme .tech-tag {
-    background: #21262d;
-    color: #58a6ff;
-    border-color: #30363d;
-}
-
-body.dark-theme .project-link {
-    color: #58a6ff;
-}
-
-body.dark-theme .projects-container::after {
-    background: #30363d;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
     }
-    
-    .projects-container::after {
-        display: none;
+
+    header {
+        background: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
     }
-}
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
+    header h1 {
+        margin: 0;
+    }
 
-/* Estilo para la sección de contacto */
-.email-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
-}
+    header p {
+        margin: 5px 0 0;
+    }
 
-.terminal-email {
-    position: relative;
-    background: #1a1a1a;
-    color: #ffffff;
-    font-family: 'Courier New', monospace;
-    padding: 12px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 1px solid #333;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
+    #about p {
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 0 auto;
+        max-width: 700px; 
+        line-height: 1.6; 
+        padding: 10px 0;
+        hyphens: auto;
+        font-size: 1.1em;
+    }
 
-.prompt {
-    color: #ffffff;
-    margin-right: 10px;
-}
-
-.terminal-email:hover {
-    background: #252525;
-    box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
-}
-
-.tooltip {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 3px;
-    font-size: 0.8em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.terminal-email:hover .tooltip {
-    opacity: 1;
-}
-
-/* Modo oscuro */
-
-.theme-toggle-container {
-    position: absolute;
-    right: 130px;
-    display: inline;
-}
-
-.theme-toggle {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 25px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 0.95em;
-}
-
-.theme-toggle:hover {
-    background: #444;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.theme-icon {
-    font-size: 1.2em;
-    transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover .theme-icon {
-    transform: rotate(20deg);
-}
-
-body.dark-theme .terminal-email {
-    background: #0d0d0d;
-    border-color: #34d639;
-}
-
-body.dark-theme .terminal-email:hover {
-    background: #1a1a1a;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
-}   
-
-.social-network{
-    justify-content: space-between;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-/* Tema oscuro del botón modo oscuro*/
-body.dark-theme {
-    background-color: #333;
-    color: #f4f4f4;
-
-}
-
-body.dark-theme header {
-    background: #222;
-}
-
-body.dark-theme section {
-    background: #444;
-    color: #f4f4f4;
-}
-
-body.dark-theme h2 {
-    color: #f4f4f4;
-    border-bottom-color: #f4f4f4;
-}
-
-body.dark-theme form button {
-    background: #555;
-}
-
-body.dark-theme footer {
-    background: #222;
-}
-
-/* Borde blanco en modo oscuro */
-body.dark-theme .foto-perfil {
-    border-color: #fff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .theme-toggle-container {
-        position: static;
+    /* Estilo para la foto de perfil */
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #ffffff; 
+        margin: 20px auto;
         display: block;
-        margin-top: 15px;
+        object-fit: cover; 
     }
-    
+
+    section {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+    }
+
+    #projects {
+        background: #f8f9fa;
+        padding: 40px 20px;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .project-card {
+        background: #fff;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        padding: 20px;
+        transition: transform 0.3s ease;
+        position: relative;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+        color: #24292e;
+        margin: 0 0 10px;
+    }
+
+    .project-description {
+        color: #586069;
+        font-size: 0.95em;
+        margin: 0 0 15px;
+    }
+
+    .project-tech {
+        margin-bottom: 15px;
+    }
+
+    .tech-tag {
+        display: inline-block;
+        background: #f1f8ff;
+        color: #0366d6;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.85em;
+        margin-right: 8px;
+        border: 1px solid #d1d5da;
+    }
+
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        color: #0366d6;
+        text-decoration: none;
+        font-weight: 500;
+        gap: 5px;
+    }
+
+    .project-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Línea divisoria entre proyectos */
+    .projects-container::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        bottom: 20px;
+        width: 1px;
+        background: #e1e4e8;
+        transform: translateX(-50%);
+    }
+
+    /* Modo Oscuro */
+    body.dark-theme #projects {
+        background: #0d1117;
+    }
+
+    body.dark-theme .project-card {
+        background: #161b22;
+        border-color: #30363d;
+    }
+
+    body.dark-theme .project-card h3 {
+        color: #c9d1d9;
+    }
+
+    body.dark-theme .project-description {
+        color: #8b949e;
+    }
+
+    body.dark-theme .tech-tag {
+        background: #21262d;
+        color: #58a6ff;
+        border-color: #30363d;
+    }
+
+    body.dark-theme .project-link {
+        color: #58a6ff;
+    }
+
+    body.dark-theme .projects-container::after {
+        background: #30363d;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .projects-container::after {
+            display: none;
+        }
+    }
+
+    form label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    /* Estilo para la sección de contacto */
+    .email-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .terminal-email {
+        position: relative;
+        background: #1a1a1a;
+        color: #ffffff;
+        font-family: 'Courier New', monospace;
+        padding: 12px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid #333;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    .prompt {
+        color: #ffffff;
+        margin-right: 10px;
+    }
+
+    .terminal-email:hover {
+        background: #252525;
+        box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+    }
+
+    .tooltip {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 4px 8px;
+        border-radius: 3px;
+        font-size: 0.8em;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .terminal-email:hover .tooltip {
+        opacity: 1;
+    }
+
+    /* Modo oscuro */
+
+    .theme-toggle-container {
+        position: absolute;
+        right: 240px;
+        display: inline-block;
+    }
+
     .theme-toggle {
-        margin-left: auto;
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 25px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 0.95em;
     }
-}
+
+    .theme-toggle:hover {
+        background: #444;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .theme-icon {
+        font-size: 1.2em;
+        transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover .theme-icon {
+        transform: rotate(20deg);
+    }
+
+    body.dark-theme .terminal-email {
+        background: #0d0d0d;
+        border-color: #34d639;
+    }
+
+    body.dark-theme .terminal-email:hover {
+        background: #1a1a1a;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background: #333;
+        color: #fff;
+        margin-top: 20px;
+    }   
+
+    .social-network{
+        justify-content: space-between;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    /* Tema oscuro del botón modo oscuro*/
+    body.dark-theme {
+        background-color: #333;
+        color: #f4f4f4;
+
+    }
+
+    body.dark-theme header {
+        background: #222;
+    }
+
+    body.dark-theme section {
+        background: #444;
+        color: #f4f4f4;
+    }
+
+    body.dark-theme h2 {
+        color: #f4f4f4;
+        border-bottom-color: #f4f4f4;
+    }
+
+    body.dark-theme form button {
+        background: #555;
+    }
+
+    body.dark-theme footer {
+        background: #222;
+    }
+
+    /* Borde blanco en modo oscuro */
+    body.dark-theme .foto-perfil {
+        border-color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .theme-toggle-container {
+            position: static;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .theme-toggle {
+            margin-left: auto;
+        }
+    }
